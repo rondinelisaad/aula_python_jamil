@@ -22,13 +22,12 @@ for line in fp.readlines():
     # Identificar semanticamente as partes das linhas do log
     # Retorna uma lista
     li = line_stripped.split(']')
-    print(li[0].strip(' ['))
-    # log_parsed['datetime'] = li[0].strip(' [')
-    # log_parsed['loglevel'] = li[1].strip(' [')
-    # log_parsed['message'] = li[2].strip(' [')
+    log_parsed['datetime'] = li[0].strip(' [')
+    log_parsed['loglevel'] = li[1].strip(' [')
+    log_parsed['message'] = li[2].strip(' [')
 
-    # # JSONL do resultada da identificação semântica
-    # print(json.dumps(log_parsed) + "\n")
+    # JSONL do resultada da identificação semântica
+    print(json.dumps(log_parsed) + "\n")
 
 
 
